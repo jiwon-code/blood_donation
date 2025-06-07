@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+body {
+    font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: rgba(248, 248, 255, 1)
+; color:white; line-height: 1.8;
+    min-width: 1440px; overflow-x: auto;display: grid; justify-content: center;
+}
+
+#tooltip {position: absolute; display: none; padding: 10px 15px 10px 15px; background-color: rgba(0, 0, 0, 0.8); 
+    color: white; border-radius: 5px; font-size: 20px; white-space: nowrap; z-index: 10; 
+    overflow: hidden;}
+
+header{
+    position: absolute; display:flex; align-items: center; text-align: center;
+    height:120px; width: 1440px; left: 50%; transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.3); color: white;
+    z-index: 2;
+    font-family: IBM Plex Sans KR, Arial, sans-serif; overflow-x: auto;
+}
+.header_title > a, .header_student > a, .header_people > a, .header_credit > a {
+    color: white; text-decoration: none; font-weight: bold; font-size:20px;}
+.header_title{padding: 0 0 0 60px; position: absolute; left: 0;}
+.header_student{left: 35%; position: absolute;}
+.header_people{left: 55%; position: absolute;}
+.header_credit{padding: 0 60px 0 0; position: absolute; right: 0;}
+
+main{width:1440px; }
+
+.interview_box{width: 100%; height:auto; background-color: white; display:flex;}
+.interview_box > div {min-height:1000px;}
+
+.this_box{width:91%; transition: all 0.7s ease-in-out; overflow-y: visible; overflow-x:hidden;}
+.notthis_box{width: 3%; transition: all 0.7s ease-in-out; color:transparent; overflow:hidden; 
+    filter: brightness(0.5);}
+
+#stu_sec1{background-color: ghostwhite;}
+#stu_sec2{background-color: ghostwhite;}
+#stu_sec3{background-color: ghostwhite;}
+#stu_sec4{background-color: ghostwhite;}
+
+
+.interview_box2{width: 100%; height:auto; background-color: ghostwhite; display:flex;}
+.interview_box2 > div {min-height:1000px;}
+
+.interview_box2{width: 100%, height: auto; background-color: ghostwhite; display:flex;}
+
+.this_box2{width:94%; transition: all 0.7s ease-in-out; overflow-y: visible; overflow-x:hidden;}
+.notthis_box2{width: 3%; transition: all 0.7s ease-in-out; color:transparent; overflow:hidden; 
+    filter: brightness(0.5);}
+
+#nur_sec1{background-color: ghostwhite;}
+#nur_sec2{background-color: ghostwhite;}
+#nur_sec3{background-color: ghostwhite;}
+
+footer{
+    background-color: #fff;
+    color: black;
+    align-items: center;
+    text-align: left;
+    width:1440px; height:200px; left: 50%; transform: translateX(-50%);
+    position: relative; overflow: hidden;
+}
+
+.footer_wrap{width:1440px; height:100%; display:flex; align-items: center;}
+
+.foot_tit{padding:0px 0px 0px 80px; font-size: 24px; font-family: Inter; font-weight: 600;}
+.foot_name{padding:0px 0px 0px 80px; font-size: 24px; font-family: Inter; font-weight: 400;}
+.foot_snupress{position:absolute; right:80px; font-family: Inter;}
+.foot_snupress_name{font-size:14px; font-weight:400; color:#000000;
+    padding: 0px 0px 20px 0px; display:flex;}
+.foot_snupress_address{font-size:12px; font-weight:350; color:#696969; font-style: normal;
+    }
+
+.icons > a{display:block; width:16px; height:16px; position:absolute; transition:.4s;}
+.insta{background:url(./images/insta.png) no-repeat; left:140px; top:3.5px;}
+.insta:hover{background:url(./images/insta_h.png) no-repeat;}
+.homepage{background:url(./images/homepage.png) no-repeat; left:162px; top:3.5px;}
+.homepage:hover{background:url(./images/homepage_h.png) no-repeat;}
