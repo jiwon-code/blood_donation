@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+body {
+    font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: rgba(248, 248, 255, 1)
+; color:white; line-height: 1.8;
+    min-width: 1440px; overflow-x: auto;
+}
+
+#tooltip {position: absolute; display: none; padding: 10px 15px 10px 15px; background-color: rgba(0, 0, 0, 0.8); 
+    color: white; border-radius: 5px; font-size: 20px; white-space: nowrap; z-index: 10; 
+    overflow: hidden;}
+
+.header-bg {
+    width: 100%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;     /* 필요하면 fixed, 아니면 absolute */
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* 가운데 1440px 영역 */
+.header-inner {
+    min-width:1440px; width:100%;              /* 기존 고정 폭 유지 */
+    height: 100%;
+    margin: 0 auto;             /* 가운데 정렬 */
+    position: relative;         /* 내부 absolute 배치 유지 */
+    display: flex;
+    align-items: center;
+    font-family: IBM Plex Sans KR, Arial, sans-serif;
+}
+
+/* 기존 스타일 유지 */
+.header_title > a, 
+.header_student > a,
+.header_people > a,
+.header_credit > a {
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size:20px;
+}
+
+/* 내부 탭 위치는 기존처럼 absolute 유지 가능 */
+.header_title {
+    padding: 0 0 0 60px; 
+    position: absolute; 
+    left: 0;
+}
+.header_student{
+    left: 35%; 
+    position: absolute;
+}
+.header_people{
+    left: 55%; 
+    position: absolute;
+}
+.header_credit{
+    padding: 0 60px 0 0; 
+    position: absolute; 
+    right: 0;
+}
+
+main{margin: 0 auto; display:grid; justify-items: center;}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    margin:0; padding:0;
+}
+
+/* blur 배경 */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* 부모 높이에 맞춰서 채움 */
+    background-size: cover;
+    background-position: top center;
+    filter: blur(10px) brightness(1.4);
+    z-index: 0;
+}
+
+.hero-bg1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* 부모 높이에 맞춰서 채움 */
+    background-size: cover;
+    background-position: top center;
+    filter: blur(10px) brightness(0.6);
+    z-index: 0;
+}
+
+
+.hero-what1 {background-image: url('./images/snu16.jpg');}
+.hero-what2 {background-image: url('./images/bus20_1.jpg');}
+.hero-what3 {background-image: url('./images/bus10.jpg');}
+.hero-what4 {background-image: url('./images/inside27.jpg');}
+
+
+.hero-image {
+    position: relative; /* 절대 위치 대신 relative 사용 */
+    display: block;
+    margin: 0 auto;     /* 가로 중앙 */
+    min-width:1440px; width:100%; max-width:2880px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.bus2020{width: 100%; height:auto; z-index: -1;}
+
+.interview_box{width: 1440px; height:auto; background-color: white; display:flex; position: relative;}
+.interview_box > div {min-height:1000px;}
+
+.this_box{width:91%; transition: all 0.7s ease-in-out; overflow-y: visible; overflow-x:hidden;}
+.notthis_box{width: 3%; transition: all 0.7s ease-in-out; color:transparent; overflow:hidden; 
+    filter: brightness(0.5);}
+
+#stu_sec1{background-color: ghostwhite;}
+#stu_sec2{background-color: ghostwhite;}
+#stu_sec3{background-color: ghostwhite;}
+#stu_sec4{background-color: ghostwhite;}
+
+
+.interview_box2{width: 1440px; height:auto; background-color: ghostwhite; display:flex; position: relative;}
+.interview_box2 > div {min-height:1000px;}
+
+.interview_box2{width: 100%, height: auto; background-color: ghostwhite; display:flex;}
+
+.this_box2{width:94%; transition: all 0.7s ease-in-out; overflow-y: visible; overflow-x:hidden;}
+.notthis_box2{width: 3%; transition: all 0.7s ease-in-out; color:transparent; overflow:hidden; 
+    filter: brightness(0.5);}
+
+#nur_sec1{background-color: ghostwhite;}
+#nur_sec2{background-color: ghostwhite;}
+#nur_sec3{background-color: ghostwhite;}
+
+.giho{font-size: 40px; font-family: 'IBM Plex Sans KR', Arial, sans-serif; font-weight: 1000; color:#3B0000;}
+
+.double_box{width:100%; height:100px; display:flex;}
+.first_dan{width:calc(200% / 3); height: 100%; display: flex; justify-content: center; align-items: center;}
+.second_dan{width:calc(100% / 3); height: 100%; display: flex; justify-content: center; align-items: center;}
+
+
+.triple_box{width:100%; height:600px; display:flex;}
+.dan {
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;               /* flex 컨테이너로 변경 */
+    flex-direction: column;      /* 위에서 아래로 쌓기 (hr → p) */
+    align-items: center;         /* 가로 가운데 정렬 */
+}
+
+.little_scription{font-size: 20px; font-family: Arial, sans-serif; font-weight: bold; color:#3B0000;}
+.little_title{font-size: 20px; font-family: Arial, sans-serif; cursor: pointer; font-weight: bold; color:#3B0000;}
+.little_section{font-size: 20px; font-family: Arial, sans-serif; cursor: pointer; font-weight: normal; color:#3B0000;}
+
+
+
+
+footer {
+    background-color: #fff;
+    color: black;
+    text-align: left;
+    height: 200px;
+    
+    display: flex;            /* ★ 세로 정렬을 footer에서 해줌 */
+    justify-content: center;  /* 가로 중앙 정렬 */
+    align-items: center;      /* 세로 중앙 정렬 */
+}
+
+.footer-bg {
+    width: 100%;
+    background-color: #fff;   /* 기존 footer 배경 유지 */
+    position: relative;
+    padding: 0;       
+}
+
+.footer-inner {
+    min-width:1440px; width:100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer_wrap{min-width:1440px; width:100%; display:flex; align-items: center;}
+
+.foot_tit{padding:0px 0px 0px 80px; font-size: 24px; font-family: Inter; font-weight: 600;}
+.foot_name{padding:0px 0px 0px 80px; font-size: 24px; font-family: Inter; font-weight: 400;}
+.foot_snupress{position:absolute; right:80px; font-family: Inter;}
+.foot_snupress_name{font-size:14px; font-weight:400; color:#000000;
+    padding: 0px 0px 20px 0px; display:flex;}
+.foot_snupress_address{font-size:12px; font-weight:350; color:#696969; font-style: normal;
+    }
+
+
+.icons > a{display:block; width:16px; height:16px; position:absolute; transition:.4s;}
+.insta{background:url(./images/insta.png) no-repeat; left:140px; top:3.5px;}
+.insta:hover{background:url(./images/insta_h.png) no-repeat;}
+.homepage{background:url(./images/homepage.png) no-repeat; left:162px; top:3.5px;}
+.homepage:hover{background:url(./images/homepage_h.png) no-repeat;}
